@@ -1,6 +1,6 @@
 # Sarvam Analyser 📊
 
-A comprehensive, production-ready enterprise analytics, sales, and multi-branch management dashboard engineered using the **MERN Stack** (MongoDB, Express.js, React.js, Node.js). 
+A comprehensive, production-ready enterprise analytics, sales, and multi-branch management dashboard engineered using the **MERN Stack** (MongoDB, Express.js, React.js, Node.js).
 
 Designed with a SaaS architecture, Sarvam Analyser provides businesses with granular control over multi-location operations, operational transactional workflows, and real-time financial tracking.
 
@@ -21,17 +21,17 @@ Designed with a SaaS architecture, Sarvam Analyser provides businesses with gran
 ## ✨ Core Architecture & Features
 
 ### 🔐 1. Managed Enterprise Authentication & Role-Based Access Control (RBAC)
-Engineered around a secure, **Enterprise-Provisioned Authentication Model** using **JSON Web Tokens (JWT) & bcrypt password hashing**. To maintain strict internal data security, public self-registration is disabled; instead, access profiles are systematically provisioned across three distinct administrative tiers:
-* **Master View:** High-level corporate overview. Global revenue tracking across all active branches, macro-financial forecasting, and high-level cross-border trends.
-* **Admin View:** Micro-management dashboard localized to specific branches. Enables real-time team performance audits, tracking of operational expenditure (OpEx), and region-specific analytics.
-* **Worker View:** Focused performance interface displaying individualized sales targets, daily transactional logs, and localized updates.
+Engineered around a secure, **Enterprise-Provisioned Authentication Model** using **JSON Web Tokens (JWT) & bcrypt password hashing**. Public self-registration is disabled; access profiles are systematically provisioned across three distinct administrative tiers:
+* **Master View:** High-level corporate overview — global revenue tracking across all active branches, macro-financial forecasting, and cross-branch trends.
+* **Admin View:** Micro-management dashboard localized to specific branches — real-time team performance audits, OpEx tracking, and region-specific analytics.
+* **Worker View:** Focused performance interface — individualized sales targets, daily transactional logs, and localized updates.
 
 ### 📉 2. Real-Time Data Visualization & Analytics
-* Integrated **Chart.js** to map complex transactional datasets into fluid, interactive time-series and categorical charts.
-* Optimized computation of key business metrics (Gross Revenue, Dynamic Net Margins, Operational Overhead) on the Express backend before transmitting compact JSON payloads to the frontend.
+* Integrated **Chart.js** to map transactional datasets into fluid, interactive time-series and categorical charts.
+* Key business metrics (Gross Revenue, Dynamic Net Margins, Operational Overhead) are computed on the Express backend before sending compact JSON payloads to the frontend.
 
 ### 📑 3. Automated Financial Reporting
-* Built-in server/client-side data rendering layer enabling users to export beautifully structured, client-ready **PDF reports** directly from the UI for external accounting or auditory compliance.
+* Built-in data rendering layer enabling export of structured, client-ready **PDF reports** directly from the UI for accounting or audit compliance.
 
 ---
 
@@ -49,9 +49,52 @@ Engineered around a secure, **Enterprise-Provisioned Authentication Model** usin
 
 ## 💻 Local Development & Installation
 
-Follow these steps to run a local instance of Sarvam Analyser for evaluation or code audit.
-
 ### 1. Environment Cloning
 ```bash
-git clone [https://github.com/Praneeth-376/sarvam_analyzer.git](https://github.com/Praneeth-376/sarvam_analyzer.git)
+git clone https://github.com/Praneeth-376/sarvam_analyzer.git
 cd sarvam_analyzer
+```
+
+### 2. Backend Setup
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in `backend/`:
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_secure_key
+PORT=5001
+```
+
+```bash
+npm run dev
+```
+
+### 3. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 4. Demo / Evaluation Access
+
+For evaluation purposes, the project includes a seed script (`backend/seed.js`) that provisions sample accounts across all three role tiers (Master, Branch Admin, Worker) and two demo branches (Downtown HQ, Tech Park), demonstrating multi-branch data isolation.
+
+To set up demo accounts on your own instance:
+```bash
+node backend/seed.js
+```
+
+This will create demo logins for each role tier with credentials defined in `seed.js`. **Do not use real/shared credentials in this file or commit `.env` to version control.**
+
+> If you'd like recruiters to test the live deployment directly, consider creating one read-only "demo" account per role with a unique, non-guessable password set specifically for that purpose — and rotate it periodically — rather than publishing your real production credentials.
+
+---
+
+## 🚀 Production Infrastructure Config
+
+* **Frontend CI/CD:** Native Vercel integration. Ensure `VITE_API_URL` points to your production backend gateway on Render.
+* **Backend Cloud Cluster:** Configured for Render Web Services. Ensure `MONGO_URI` and `JWT_SECRET` are set as environment variables on the Render dashboard before deployment.
