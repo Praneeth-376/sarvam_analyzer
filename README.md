@@ -20,8 +20,8 @@ Designed with a SaaS architecture, Sarvam Analyser provides businesses with gran
 
 ## ✨ Core Architecture & Features
 
-### 🔐 1. Granular Role-Based Access Control (RBAC)
-Secured via state-of-the-art authentication mechanisms (**JSON Web Tokens & bcrypt password hashing**), separating operations into three distinct data views:
+### 🔐 1. Managed Enterprise Authentication & Role-Based Access Control (RBAC)
+Engineered around a secure, **Enterprise-Provisioned Authentication Model** using **JSON Web Tokens (JWT) & bcrypt password hashing**. To maintain strict internal data security, public self-registration is disabled; instead, access profiles are systematically provisioned across three distinct administrative tiers:
 * **Master View:** High-level corporate overview. Global revenue tracking across all active branches, macro-financial forecasting, and high-level cross-border trends.
 * **Admin View:** Micro-management dashboard localized to specific branches. Enables real-time team performance audits, tracking of operational expenditure (OpEx), and region-specific analytics.
 * **Worker View:** Focused performance interface displaying individualized sales targets, daily transactional logs, and localized updates.
