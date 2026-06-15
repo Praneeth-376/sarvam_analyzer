@@ -1,51 +1,57 @@
-Sarvam Analyser 📊
-A comprehensive analytics, sales, and management dashboard built with the MERN stack (MongoDB, Express, React, Node.js).
+# Sarvam Analyser 📊
 
-Overivew
-Sarvam Analyser is designed to provide role-based access for Master, Admin, and Worker users, allowing them to track sales, monitor branches, and review overall business performance.
+A comprehensive, production-ready enterprise analytics, sales, and multi-branch management dashboard engineered using the **MERN Stack** (MongoDB, Express.js, React.js, Node.js). 
 
-Features ✨
-Role-Based Authentication: Secure login supporting Master, Admin, and Worker roles.
-Master Dashboard: Global overview of all branches, revenue tracking, and forecasting.
-Admin Dashboard: Branch-specific analytics, team performance monitoring, and localized expenses.
-Worker Dashboard: Personal sales targets, daily sales tracking, and inventory status.
-Real-Time Data Visualization: Beautiful interactive charts using Chart.js.
-Stock Management: Request, approve, or reject stock transfers in real-time.
-Exporting: Download beautifully formatted PDF reports for accounting.
-Tech Stack 🛠️
-Frontend: React.js, Vite, Chart.js, Lucide-React, Axios
-Backend: Node.js, Express.js
-Database: MongoDB & Mongoose
-Authentication: JSON Web Tokens (JWT) & bcrypt
-Deployment: Vercel (Frontend), Render (Backend)
-Running Locally 💻
-1. Clone the repository
-git clone https://github.com/KayalaDurgaEswar/Sarvam-Analyzer.git
-cd Sarvam-Analyzer
-2. Backend Setup
-cd backend
-npm install
-Create a .env file in the backend directory and add:
+Designed with a SaaS architecture, Sarvam Analyser provides businesses with granular control over multi-location operations, operational transactional workflows, and real-time financial tracking.
 
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5001
-Start the backend server:
+---
 
-npm run dev
-3. Frontend Setup
-Open a new terminal window:
+## 🚀 Live Demo & Visuals
 
-cd frontend
-npm install
-npm run dev
-4. Default Login Credentials
-You can seed the database with node backend/seed.js to use these credentials:
+* **Frontend Deployment:** https://sarvam-analyzer-olive.vercel.app/
+* **Backend API Gateway:** https://sarvam-analyzer-ywnv.onrender.com
 
-Master: master@sarvam.com
-Admin: admin1@sarvam.com
-Worker: worker1@sarvam.com
-Password: password123 (for all accounts)
-Production Deployment 🚀
-Frontend is configured to be deployed on Vercel. Ensure you set the VITE_API_URL environment variable to your backend URL.
-Backend is configured to be deployed on Render as a Web Service. Ensure you set the MONGO_URI and JWT_SECRET environment variables.
+### Application Preview
+| Authentication & Role Gateway | Interactive Analytics Dashboard |
+| :---: | :---: |
+| <img width="1896" height="1018" alt="Authentication Gateway" src="https://github.com/user-attachments/assets/3e0fdf6c-ab3a-4451-91cc-b1b6b5f55391" /> | <img width="1882" height="1017" alt="Analytics Dashboard" src="https://github.com/user-attachments/assets/1239c7a6-370d-4c6f-96a2-d3ee41afde83" /> |
+
+---
+
+## ✨ Core Architecture & Features
+
+### 🔐 1. Managed Enterprise Authentication & Role-Based Access Control (RBAC)
+Engineered around a secure, **Enterprise-Provisioned Authentication Model** using **JSON Web Tokens (JWT) & bcrypt password hashing**. To maintain strict internal data security, public self-registration is disabled; instead, access profiles are systematically provisioned across three distinct administrative tiers:
+* **Master View:** High-level corporate overview. Global revenue tracking across all active branches, macro-financial forecasting, and high-level cross-border trends.
+* **Admin View:** Micro-management dashboard localized to specific branches. Enables real-time team performance audits, tracking of operational expenditure (OpEx), and region-specific analytics.
+* **Worker View:** Focused performance interface displaying individualized sales targets, daily transactional logs, and localized updates.
+
+### 📉 2. Real-Time Data Visualization & Analytics
+* Integrated **Chart.js** to map complex transactional datasets into fluid, interactive time-series and categorical charts.
+* Optimized computation of key business metrics (Gross Revenue, Dynamic Net Margins, Operational Overhead) on the Express backend before transmitting compact JSON payloads to the frontend.
+
+### 📑 3. Automated Financial Reporting
+* Built-in server/client-side data rendering layer enabling users to export beautifully structured, client-ready **PDF reports** directly from the UI for external accounting or auditory compliance.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies Utilized |
+| --- | --- |
+| **Frontend** | React.js, Vite, Chart.js, Lucide React icons, Axios (HTTP Client) |
+| **Backend** | Node.js, Express.js (Modular REST API architecture) |
+| **Database** | MongoDB, Mongoose ODM (Optimized schemas with indexing) |
+| **Security** | JSON Web Tokens (JWT) for stateless sessions, Bcrypt for cryptographic hashing |
+| **Deployment** | Vercel (Edge-optimized Frontend), Render (Cloud Web Service Backend) |
+
+---
+
+## 💻 Local Development & Installation
+
+Follow these steps to run a local instance of Sarvam Analyser for evaluation or code audit.
+
+### 1. Environment Cloning
+```bash
+git clone [https://github.com/Praneeth-376/sarvam_analyzer.git](https://github.com/Praneeth-376/sarvam_analyzer.git)
+cd sarvam_analyzer
