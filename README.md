@@ -8,7 +8,7 @@ Designed with a SaaS architecture, Sarvam Analyser provides businesses with gran
 
 ## 🚀 Live Demo & Visuals
 
-* **Frontend Deployment:** [PASTE_YOUR_PUBLIC_VERCEL_APP_URL_HERE] *(e.g., https://sarvam-analyzer-your-name.vercel.app)*
+* **Frontend Deployment:** https://sarvam-analyzer-olive.vercel.app/
 * **Backend API Gateway:** https://sarvam-analyzer-ywnv.onrender.com
 
 ### Application Preview
