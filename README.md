@@ -1,65 +1,60 @@
 # Sarvam Analyser 📊
 
-A comprehensive analytics, sales, and management dashboard built with the MERN stack (MongoDB, Express, React, Node.js). 
+A comprehensive, production-ready enterprise analytics, sales, and multi-branch management dashboard engineered using the **MERN Stack** (MongoDB, Express.js, React.js, Node.js). 
 
-## Overivew
-Sarvam Analyser is designed to provide role-based access for Master, Admin, and Worker users, allowing them to track sales, monitor branches, and review overall business performance.
+Designed with a SaaS architecture, Sarvam Analyser provides businesses with granular control over multi-location operations, inventory logistical workflows, and real-time financial tracking.
 
-## Features ✨
-- **Role-Based Authentication**: Secure login supporting Master, Admin, and Worker roles.
-- **Master Dashboard**: Global overview of all branches, revenue tracking, and forecasting.
-- **Admin Dashboard**: Branch-specific analytics, team performance monitoring, and localized expenses.
-- **Worker Dashboard**: Personal sales targets, daily sales tracking, and inventory status.
-- **Real-Time Data Visualization**: Beautiful interactive charts using Chart.js.
-- **Stock Management**: Request, approve, or reject stock transfers in real-time.
-- **Exporting**: Download beautifully formatted PDF reports for accounting.
+---
 
-## Tech Stack 🛠️
-- **Frontend**: React.js, Vite, Chart.js, Lucide-React, Axios
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB & Mongoose
-- **Authentication**: JSON Web Tokens (JWT) & bcrypt
-- **Deployment**: Vercel (Frontend), Render (Backend)
+## 🚀 Live Demo & Visuals
 
-## Running Locally 💻
+* **Frontend Deployment:** [Paste your Vercel Link Here - e.g., https://sarvam-analyzer.vercel.app]
+* **Backend API Gateway:** [Paste your Render Link Here - e.g., https://sarvam-analyzer.onrender.com]
 
-### 1. Clone the repository
+### Application Preview
+| Authentication & Role Gateway | Interactive Analytics Dashboard | Stock Logistical Management |
+| :---: | :---: | :---: |
+| *[Drop Login Screenshot Here]* | *[Drop Dashboard/Charts Screenshot Here]* | *[Drop Stock Transfer Table Screenshot Here]* |
+
+---
+
+## ✨ Core Architecture & Features
+
+### 🔐 1. Granular Role-Based Access Control (RBAC)
+Secured via state-of-the-art authentication mechanisms (**JSON Web Tokens & bcrypt password hashing**), separating operations into three distinct data views:
+* **Master View:** High-level corporate overview. Global revenue tracking across all active branches, macro-financial forecasting, and high-level cross-border trends.
+* **Admin View:** Micro-management dashboard localized to specific branches. Enables real-time team performance audits, tracking of operational expenditure (OpEx), and region-specific stock control.
+* **Worker View:** Focused performance interface displaying individualized sales targets, daily transactional logs, and localized inventory updates.
+
+### 📉 2. Real-Time Data Visualization & Analytics
+* Integrated **Chart.js** to map complex transactional datasets into fluid, interactive time-series and categorical charts.
+* Optimized computation of key business metrics (Gross Revenue, Dynamic Net Margins, Operational Overhead) on the Express backend before transmitting compact JSON payloads to the frontend.
+
+### 📦 3. Live Logistical Stock Management
+* A state-driven internal supply-chain simulator allowing admins and workers to safely request, approve, or reject inventory transfers between distinct branch locations to eliminate logistical bottlenecks.
+
+### 📑 4. Automated Financial Reporting
+* Built-in server/client-side data rendering layer enabling users to export beautifully structured, client-ready **PDF reports** directly from the UI for external accounting or auditory compliance.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies Utilized |
+| --- | --- |
+| **Frontend** | React.js, Vite, Chart.js, Lucide React icons, Axios (HTTP Client) |
+| **Backend** | Node.js, Express.js (Modular REST API architecture) |
+| **Database** | MongoDB, Mongoose ODM (Optimized schemas with indexing) |
+| **Security** | JSON Web Tokens (JWT) for stateless sessions, Bcrypt for cryptographic hashing |
+| **Deployment** | Vercel (Edge-optimized Frontend), Render (Cloud Web Service Backend) |
+
+---
+
+## 💻 Local Development & Installation
+
+Follow these steps to run a local instance of Sarvam Analyser for evaluation or code audit.
+
+### 1. Environment Cloning
 ```bash
-git clone https://github.com/PandalaPraneeth/Sarvam-Analyzer.git
+git clone [https://github.com/KayalaDurgaEswar/Sarvam-Analyzer.git](https://github.com/KayalaDurgaEswar/Sarvam-Analyzer.git)
 cd Sarvam-Analyzer
-```
-
-### 2. Backend Setup
-```bash
-cd backend
-npm install
-```
-Create a `.env` file in the `backend` directory and add:
-```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5001
-```
-Start the backend server:
-```bash
-npm run dev
-```
-
-### 3. Frontend Setup
-Open a new terminal window:
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### 4. Default Login Credentials
-You can seed the database with `node backend/seed.js` to use these credentials:
-- **Master**: `master@sarvam.com`
-- **Admin**: `admin1@sarvam.com`
-- **Worker**: `worker1@sarvam.com`
-- **Password**: `password123` *(for all accounts)*
-
-## Production Deployment 🚀
-- **Frontend** is configured to be deployed on Vercel. Ensure you set the `VITE_API_URL` environment variable to your backend URL.
-- **Backend** is configured to be deployed on Render as a Web Service. Ensure you set the `MONGO_URI` and `JWT_SECRET` environment variables.
