@@ -87,14 +87,3 @@ To set up demo accounts on your own instance:
 ```bash
 node backend/seed.js
 ```
-
-This will create demo logins for each role tier with credentials defined in `seed.js`. **Do not use real/shared credentials in this file or commit `.env` to version control.**
-
-> If you'd like recruiters to test the live deployment directly, consider creating one read-only "demo" account per role with a unique, non-guessable password set specifically for that purpose — and rotate it periodically — rather than publishing your real production credentials.
-
----
-
-## 🚀 Production Infrastructure Config
-
-* **Frontend CI/CD:** Native Vercel integration. Ensure `VITE_API_URL` points to your production backend gateway on Render.
-* **Backend Cloud Cluster:** Configured for Render Web Services. Ensure `MONGO_URI` and `JWT_SECRET` are set as environment variables on the Render dashboard before deployment.
