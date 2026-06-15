@@ -8,8 +8,8 @@ Designed with a SaaS architecture, Sarvam Analyser provides businesses with gran
 
 ## 🚀 Live Demo & Visuals
 
-* **Frontend Deployment:** [Paste your Vercel Link Here - e.g., https://sarvam-analyzer.vercel.app]
-* **Backend API Gateway:** [Paste your Render Link Here - e.g., https://sarvam-analyzer.onrender.com]
+* **Frontend Deployment:** [PASTE_YOUR_PUBLIC_VERCEL_APP_URL_HERE] *(e.g., https://sarvam-analyzer-your-name.vercel.app)*
+* **Backend API Gateway:** https://sarvam-analyzer-ywnv.onrender.com
 
 ### Application Preview
 | Authentication & Role Gateway | Interactive Analytics Dashboard | Stock Logistical Management |
@@ -56,5 +56,5 @@ Follow these steps to run a local instance of Sarvam Analyser for evaluation or 
 
 ### 1. Environment Cloning
 ```bash
-git clone [https://github.com/KayalaDurgaEswar/Sarvam-Analyzer.git](https://github.com/KayalaDurgaEswar/Sarvam-Analyzer.git)
-cd Sarvam-Analyzer
+git clone [https://github.com/Praneeth-376/sarvam_analyzer.git](https://github.com/Praneeth-376/sarvam_analyzer.git)
+cd sarvam_analyzer
