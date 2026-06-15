@@ -14,7 +14,9 @@ Designed with a SaaS architecture, Sarvam Analyser provides businesses with gran
 ### Application Preview
 | Authentication & Role Gateway | Interactive Analytics Dashboard | Stock Logistical Management |
 | :---: | :---: | :---: |
-| *[Drop Login Screenshot Here]* | *[Drop Dashboard/Charts Screenshot Here]* | *[Drop Stock Transfer Table Screenshot Here]* |
+| *<img width="1896" height="1018" alt="image" src="https://github.com/user-attachments/assets/3e0fdf6c-ab3a-4451-91cc-b1b6b5f55391" />
+* | *<img width="1882" height="1017" alt="image" src="https://github.com/user-attachments/assets/1239c7a6-370d-4c6f-96a2-d3ee41afde83" />
+
 
 ---
 
