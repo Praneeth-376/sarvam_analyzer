@@ -55,3 +55,50 @@ Follow these steps to run a local instance of Sarvam Analyser for evaluation or 
 ```bash
 git clone [https://github.com/Praneeth-376/sarvam_analyzer.git](https://github.com/Praneeth-376/sarvam_analyzer.git)
 cd sarvam_analyzer
+
+### 2. Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the `backend` directory and add:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=5001
+```
+
+Start the backend server:
+
+```bash
+npm run dev
+```
+
+### 3. Frontend Setup
+
+Open a new terminal window:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 4. Default Login Credentials
+
+You can seed the database with `node backend/seed.js` to use these credentials locally:
+
+* **Master:** `master@sarvam.com`
+* **Admin:** `admin1@sarvam.com`
+* **Worker:** `worker1@sarvam.com`
+* **Password:** `password123` (for all accounts)
+
+> ⚠️ These are for **local development only**. Do not use these credentials for the live production deployment — set unique passwords for any demo accounts on Vercel/Render.
+
+## Production Deployment 🚀
+
+* **Frontend** is configured to be deployed on Vercel. Ensure you set the `VITE_API_URL` environment variable to your backend URL.
+* **Backend** is configured to be deployed on Render as a Web Service. Ensure you set the `MONGO_URI` and `JWT_SECRET` environment variables.
